@@ -6,17 +6,18 @@
 // @match       https://*.github.com/*
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     // Your code here...
     try {
-        const elements = document.getElementsByTagName('a');
+        const readme = document.getElementById('readme');
+        const elements = readme.getElementsByTagName('a');
         for (const element of elements) {
             element.setAttribute('target', '_blank');
             element.setAttribute('rel', 'noopener noreferrer');
         };
-    } catch (error){
+    } catch (error) {
         alert(error);
     }
 })();
