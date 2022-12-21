@@ -12,11 +12,13 @@
     // Your code here...
     try {
         const readme = document.getElementById('readme');
-        const elements = readme.getElementsByTagName('a');
-        for (const element of elements) {
-            element.setAttribute('target', '_blank');
-            element.setAttribute('rel', 'noopener noreferrer');
-        };
+        if (readme !== null) {
+            const elements = readme.getElementsByTagName('a');
+            for (const element of elements) {
+                element.setAttribute('target', '_blank');
+                element.setAttribute('rel', 'noopener noreferrer');
+            }
+        }
     } catch (error) {
         alert(error);
     }
